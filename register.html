@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Register</title>
+    <style type="text/tailwindcss"></style>
+</head>
+<body class="containers bg-[#FEAF00] ">
+    
+    <div class="w-[475px]  bg-white rounded-[20px] mx-auto mt-[75px] mb-[75px]">
+        <img class="mx-auto pt-[44px]" src="./images/Logo.png" alt="Login logo" width="285" height="39">
+        <div class="mx-auto pt-[44px] flex flex-col items-center gap-[9px]">
+            <h2 class="font-semibold text-[22px] text-transform: uppercase">Sign up</h2>
+            <p class="font-normal text-[14px] text-[#6C6C6C]">Enter your credentials to access your account</p>
+        </div>
+        <div>
+              <form autocomplete="off" class="register-form mt-[30px] space-y-[19px]">
+                <label class="px-8 flex flex-col gap-[11px]">
+                 <span class="flex-start font-medium text-[14px] text-[#6C6C6C]">Enter new login</span>
+                <input  required class=" w-[415px] h-[44px] border-[1px] border-[#E5E5E5] pl-[13px] font-medium text-[12px] placeholder:text-[#6C6C6C] text-grey-200 rounded-[4px] outline-none" type="text" placeholder="Enter your login" name="username">
+                </label>
+
+                <label class="px-8 flex flex-col gap-[11px]">
+                <span class="font-medium text-[14px] text-[#6C6C6C]">Create new password</span>
+                <input required class=" w-[415px] h-[44px] border-[1px] border-[#E5E5E5] pl-[13px] font-medium text-[12px] placeholder:text-[#6C6C6C] text-grey-200 rounded-[4px] outline-none" type="text" placeholder="Enter your password" name="password">
+                </label>
+                
+                <label class="px-8  text-center mx-auto">
+                <button class="login-btn mb-[85px] mt-[35px] w-[415px] h-[44px] bg-[rgba(254,175,0,1)] rounded-[4px] text-white text-[14px] font-medium" type="submit">Sign up</button>
+                </label>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="./js/password-list.js"></script>
+    <script src="./js/register.js"></script>
+</body>
+</html>
