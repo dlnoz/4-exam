@@ -25,7 +25,7 @@ elForm.addEventListener("submit", function(evt){
                 location.pathname = "/students.html"
             }
             else{
-                alert("There Is an Error.")
+                alert("There is an Error.")
             }
         },600)
     },1000)
