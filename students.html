@@ -3,125 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <title>Students</title>
-    <style type="text/tailwindcss"></style>
+    <title>Students Management</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .modal-wrapper {
+            transition: all 0.3s ease;
+        }
+    </style>
 </head>
-<body>
-
-   <div class="containers flex items-center">
-    <!--  Students left page start  -->
-        <div class="w-[25%] h-[100vh] bg-[#F2EAE1]">
-            <img class="mx-auto pt-[20px] pb-[60px]" src="./images/Logo.png" alt="Logo img" width="183" height="24">
-            <label>
-                <input class="change-img-input hidden" type="file">
-                <img class="change-img  rounded-full mx-auto" src="./images/default-photo.png" alt="Users photo" width="150" height="150">
-                <p class="user-name text-center font-bold text-[17px] text-black"></p>
-                <span class="flex justify-center mt-[10px] text-center font-medium text-[14px] text-[#FEAF00]">Admin</span>
-            </label>
-            <button class="w-[193px] h-[41px] bg-[#FEAF00] rounded-[4px] font-medium text-[14px] flex items-center gap-[15px] justify-center mx-auto mt-[63px]">
-                <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M19.13 2.81219L10.8488 0.134689C10.2922 -0.0449982 9.70813 -0.0449982 9.15156 0.134689L0.870313 2.81219C0.341875 2.98313 0 3.44938 0 4C0 4.55063 0.341875 5.01688 0.87 5.18781L1.79844 5.48781C1.69531 5.68094 1.61906 5.88875 1.56938 6.10656C1.23531 6.26844 1 6.60375 1 7C1 7.39781 1.23656 7.735 1.57281 7.89594L1.00875 11.3916C0.958437 11.7038 1.13094 12 1.36312 12H2.63656C2.86875 12 3.04156 11.7038 2.99094 11.3916L2.42719 7.89594C2.76344 7.735 3 7.39781 3 7C3 6.66875 2.82844 6.38938 2.58031 6.20719C2.62687 6.06156 2.69906 5.93031 2.78562 5.80688L4.45656 6.34719L4 10C4 11.1047 6.68625 12 10 12C13.3138 12 16 11.1047 16 10L15.5434 6.34719L19.13 5.1875C19.6581 5.01688 20 4.55063 20 4C20 3.44938 19.6581 2.98313 19.13 2.81219ZM14.9838 9.93313C14.6475 10.2872 12.9388 11 10 11C7.06125 11 5.3525 10.2872 5.01625 9.93313L5.42531 6.66031L9.15156 7.865C9.23281 7.89125 9.95531 8.15344 10.8488 7.865L14.575 6.66031L14.9838 9.93313ZM18.8213 4.23688L10.54 6.91438C10.1866 7.02875 9.81344 7.02875 9.46 6.91438L3.97031 5.13938L10.0919 3.99125C10.3634 3.94063 10.5422 3.67938 10.4913 3.40781C10.4406 3.13594 10.1737 2.95813 9.90812 3.00875L3.54 4.2025C3.1525 4.275 2.80531 4.44156 2.50625 4.66594L1.17844 4.23656C0.933125 4.15688 0.945312 3.83844 1.17844 3.76313L9.45969 1.08563C9.93156 0.933127 10.3297 1.01781 10.5397 1.08563L18.8209 3.76313C19.0519 3.83781 19.0681 4.15688 18.8213 4.23688Z" fill="black"/>
-                </svg>
-                <span>Students</span>
-            </button>
-            <div class="logout-btn flex items-center justify-center gap-[23px] mt-[350px] cursor-pointer">
-                <span>Logout</span>
-                <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5.3125 7.2084C5.3125 6.91621 5.55156 6.67715 5.84375 6.67715H10.625V3.55937C10.625 3.32363 10.9105 3.2041 11.0766 3.37012L15.7781 8.12148C15.9873 8.33066 15.9873 8.66602 15.7781 8.8752L11.0766 13.6266C10.9105 13.7926 10.625 13.6764 10.625 13.4373V10.3195H5.84375C5.55156 10.3195 5.3125 10.0805 5.3125 9.78828V7.2084ZM4.25 7.2084V9.78828C4.25 10.6682 4.96387 11.382 5.84375 11.382H9.5625V13.4373C9.5625 14.616 10.9902 15.2137 11.827 14.377L16.5318 9.62891C17.1561 9.00469 17.1561 7.99531 16.5318 7.37109L11.827 2.61973C10.9936 1.78633 9.5625 2.37734 9.5625 3.55937V5.61465H5.84375C4.96387 5.61465 4.25 6.33184 4.25 7.2084ZM0 3.71875V13.2812C0 14.1611 0.713867 14.875 1.59375 14.875H5.97656C6.1957 14.875 6.375 14.6957 6.375 14.4766V14.2109C6.375 13.9918 6.1957 13.8125 5.97656 13.8125H1.59375C1.30156 13.8125 1.0625 13.5734 1.0625 13.2812V3.71875C1.0625 3.42656 1.30156 3.1875 1.59375 3.1875H5.97656C6.1957 3.1875 6.375 3.0082 6.375 2.78906V2.52344C6.375 2.3043 6.1957 2.125 5.97656 2.125H1.59375C0.713867 2.125 0 2.83887 0 3.71875Z" fill="black"/>
-                </svg>
+<body class="bg-gray-100">
+    <div class="container mx-auto flex min-h-screen">
+        <!-- Sidebar -->
+        <div class="w-64 bg-[#F2EAE1] p-4">
+            <div class="text-center py-4">
+                <img src="./images/Logo.png" alt="Logo" class="mx-auto h-8">
             </div>
-        </div>  
-    <!--  Students left page end  -->
-    
-    <!--  Students right page start  -->
-        <div class="w-[75%] h-[100vh] bg-white">
-            <!--  Header part start -->
-            <div class="flex items-center justify-between bg-[#F2EAE1] w-[1211px] h-[70px]">
-                <svg class="ml-[30px]" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_21_352)">
-                    <path d="M17.7188 9C17.7188 4.18359 13.8164 0.28125 9 0.28125C4.18359 0.28125 0.28125 4.18359 0.28125 9C0.28125 13.8164 4.18359 17.7187 9 17.7188C13.8164 17.7188 17.7187 13.8164 17.7188 9ZM9 16.5938C4.82695 16.5938 1.40625 13.2152 1.40625 9C1.40625 4.82695 4.78477 1.40625 9 1.40625C13.173 1.40625 16.5938 4.78477 16.5938 9C16.5938 13.173 13.2152 16.5938 9 16.5938ZM10.125 12.375L6.75 9L10.125 5.625L10.125 12.375ZM11.25 5.625C11.25 4.62656 10.0371 4.12031 9.33047 4.83047L5.95547 8.20547C5.51602 8.64492 5.51602 9.35859 5.95547 9.79805L9.33047 13.173C10.0371 13.8797 11.25 13.3805 11.25 12.3785L11.25 5.625Z" fill="black"/>
-                    </g>
-                    <defs>
-                    <clipPath id="clip0_21_352">
-                    <rect width="18" height="18" fill="white" transform="matrix(0 1 -1 0 18 0)"/>
-                    </clipPath>
-                    </defs>
-                </svg>
-                <form class="flex items-center gap-[30px] p-[50px]">
-                    <label class="relative flex items-center gap-[27px]">
-                        <input class="bg-white w-[212px] h-[44px] text-black rounded-[8px] pl-[13px] outline-none placeholder:text-[#C4C4C4]" type="text" placeholder="Search...">
-                        <svg class="absolute top-[15px] right-[20px]" width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M13.9043 13.1687L10.377 9.64141C10.3141 9.57852 10.232 9.5457 10.1445 9.5457H9.86289C10.8008 8.53125 11.375 7.17773 11.375 5.6875C11.375 2.5457 8.8293 0 5.6875 0C2.5457 0 0 2.5457 0 5.6875C0 8.8293 2.5457 11.375 5.6875 11.375C7.17773 11.375 8.53125 10.8008 9.5457 9.86562V10.1445C9.5457 10.232 9.58125 10.3141 9.64141 10.377L13.1687 13.9043C13.2973 14.0328 13.5051 14.0328 13.6336 13.9043L13.9043 13.6336C14.0328 13.5051 14.0328 13.2973 13.9043 13.1687ZM5.6875 10.5C3.02695 10.5 0.875 8.34805 0.875 5.6875C0.875 3.02695 3.02695 0.875 5.6875 0.875C8.34805 0.875 10.5 3.02695 10.5 5.6875C10.5 8.34805 8.34805 10.5 5.6875 10.5Z" fill="#C4C4C4"/>
-                        </svg>
-                    </label>
+            
+            <div class="text-center py-6">
+                <label class="cursor-pointer">
+                    <input type="file" class="change-img-input hidden">
+                    <img src="./images/default-photo.png" class="change-img w-24 h-24 rounded-full mx-auto mb-2">
+                    <p class="user-name font-bold">Admin</p>
+                    <span class="text-[#FEAF00]">Administrator</span>
+                </label>
+            </div>
+            
+            <div class="mt-8">
+                <button class="w-full bg-[#FEAF00] py-2 rounded flex items-center justify-center gap-2">
+                    <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.13 2.81219L10.8488 0.134689C10.2922 -0.0449982 9.70813 -0.0449982 9.15156 0.134689L0.870313 2.81219C0.341875 2.98313 0 3.44938 0 4C0 4.55063 0.341875 5.01688 0.87 5.18781L1.79844 5.48781C1.69531 5.68094 1.61906 5.88875 1.56938 6.10656C1.23531 6.26844 1 6.60375 1 7C1 7.39781 1.23656 7.735 1.57281 7.89594L1.00875 11.3916C0.958437 11.7038 1.13094 12 1.36312 12H2.63656C2.86875 12 3.04156 11.7038 2.99094 11.3916L2.42719 7.89594C2.76344 7.735 3 7.39781 3 7C3 6.66875 2.82844 6.38938 2.58031 6.20719C2.62687 6.06156 2.69906 5.93031 2.78562 5.80688L4.45656 6.34719L4 10C4 11.1047 6.68625 12 10 12C13.3138 12 16 11.1047 16 10L15.5434 6.34719L19.13 5.1875C19.6581 5.01688 20 4.55063 20 4C20 3.44938 19.6581 2.98313 19.13 2.81219ZM14.9838 9.93313C14.6475 10.2872 12.9388 11 10 11C7.06125 11 5.3525 10.2872 5.01625 9.93313L5.42531 6.66031L9.15156 7.865C9.23281 7.89125 9.95531 8.15344 10.8488 7.865L14.575 6.66031L14.9838 9.93313ZM18.8213 4.23688L10.54 6.91438C10.1866 7.02875 9.81344 7.02875 9.46 6.91438L3.97031 5.13938L10.0919 3.99125C10.3634 3.94063 10.5422 3.67938 10.4913 3.40781C10.4406 3.13594 10.1737 2.95813 9.90812 3.00875L3.54 4.2025C3.1525 4.275 2.80531 4.44156 2.50625 4.66594L1.17844 4.23656C0.933125 4.15688 0.945312 3.83844 1.17844 3.76313L9.45969 1.08563C9.93156 0.933127 10.3297 1.01781 10.5397 1.08563L18.8209 3.76313C19.0519 3.83781 19.0681 4.15688 18.8213 4.23688Z" fill="black"/>
+                    </svg>
+                    <span>Students</span>
+                </button>
+            </div>
+            
+            <div class="mt-64 text-center">
+                <button class="logout-btn flex items-center justify-center gap-2 text-gray-700 hover:text-black">
+                    <span>Logout</span>
+                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.3125 7.2084C5.3125 6.91621 5.55156 6.67715 5.84375 6.67715H10.625V3.55937C10.625 3.32363 10.9105 3.2041 11.0766 3.37012L15.7781 8.12148C15.9873 8.33066 15.9873 8.66602 15.7781 8.8752L11.0766 13.6266C10.9105 13.7926 10.625 13.6764 10.625 13.4373V10.3195H5.84375C5.55156 10.3195 5.3125 10.0805 5.3125 9.78828V7.2084ZM4.25 7.2084V9.78828C4.25 10.6682 4.96387 11.382 5.84375 11.382H9.5625V13.4373C9.5625 14.616 10.9902 15.2137 11.827 14.377L16.5318 9.62891C17.1561 9.00469 17.1561 7.99531 16.5318 7.37109L11.827 2.61973C10.9936 1.78633 9.5625 2.37734 9.5625 3.55937V5.61465H5.84375C4.96387 5.61465 4.25 6.33184 4.25 7.2084ZM0 3.71875V13.2812C0 14.1611 0.713867 14.875 1.59375 14.875H5.97656C6.1957 14.875 6.375 14.6957 6.375 14.4766V14.2109C6.375 13.9918 6.1957 13.8125 5.97656 13.8125H1.59375C1.30156 13.8125 1.0625 13.5734 1.0625 13.2812V3.71875C1.0625 3.42656 1.30156 3.1875 1.59375 3.1875H5.97656C6.1957 3.1875 6.375 3.0082 6.375 2.78906V2.52344C6.375 2.3043 6.1957 2.125 5.97656 2.125H1.59375C0.713867 2.125 0 2.83887 0 3.71875Z" fill="currentColor"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="flex-1 bg-white">
+            <!-- Header -->
+            <div class="bg-[#F2EAE1] p-4 flex justify-between items-center">
+                <div class="flex items-center">
+                    <svg class="ml-4" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.7188 9C17.7188 4.18359 13.8164 0.28125 9 0.28125C4.18359 0.28125 0.28125 4.18359 0.28125 9C0.28125 13.8164 4.18359 17.7187 9 17.7188C13.8164 17.7188 17.7187 13.8164 17.7188 9ZM9 16.5938C4.82695 16.5938 1.40625 13.2152 1.40625 9C1.40625 4.82695 4.78477 1.40625 9 1.40625C13.173 1.40625 16.5938 4.78477 16.5938 9C16.5938 13.173 13.2152 16.5938 9 16.5938ZM10.125 12.375L6.75 9L10.125 5.625L10.125 12.375ZM11.25 5.625C11.25 4.62656 10.0371 4.12031 9.33047 4.83047L5.95547 8.20547C5.51602 8.64492 5.51602 9.35859 5.95547 9.79805L9.33047 13.173C10.0371 13.8797 11.25 13.3805 11.25 12.3785L11.25 5.625Z" fill="black"/>
+                    </svg>
+                    <input type="text" placeholder="Search..." class="ml-4 bg-white rounded px-4 py-2 w-64 focus:outline-none">
+                </div>
+                <div class="flex items-center">
                     <svg width="17" height="20" viewBox="0 0 17 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g clip-path="url(#clip0_21_354)">
                         <path d="M8.5003 18.75C9.17044 18.75 9.71459 18.1883 9.71459 17.4988H10.9289C10.9289 18.8781 9.83905 20 8.5003 20C7.16155 20 6.07173 18.8781 6.07173 17.4988H7.28602C7.28602 18.1883 7.83017 18.75 8.5003 18.75ZM0.555079 13.0785C1.61606 12.0387 2.42735 10.9504 2.42735 7.26172C2.42735 4.15273 4.83278 1.61719 7.89316 1.31055V0.625C7.89316 0.279687 8.16486 0 8.5003 0C8.83575 0 9.10745 0.279687 9.10745 0.625V1.31094C12.1678 1.61758 14.5733 4.15273 14.5733 7.26172C14.5733 10.95 15.3849 12.0387 16.4459 13.0785C16.976 13.598 17.1434 14.3836 16.8728 15.0797C16.5966 15.7906 15.9317 16.25 15.1789 16.25H1.82173C1.06887 16.25 0.404051 15.7902 0.1278 15.0793C-0.142757 14.3832 0.0249653 13.598 0.555079 13.0785ZM1.82173 15H15.1789C15.7189 15 15.9887 14.3566 15.6084 13.984C14.2856 12.6875 13.359 11.2363 13.359 7.26211C13.359 4.63008 11.1858 2.5 8.5003 2.5C5.81521 2.5 3.64164 4.62969 3.64164 7.26172C3.64164 11.2207 2.72296 12.6797 1.39218 13.9836C1.01044 14.3582 1.28403 15 1.82173 15Z" fill="black"/>
-                        </g>
-                        <defs>
-                        <clipPath id="clip0_21_354">
-                        <rect width="17" height="20" fill="white" transform="matrix(-1 0 0 1 17 0)"/>
-                        </clipPath>
-                        </defs>
                     </svg>
-                </form>
+                </div>
             </div>
-            <!--  Header part end  -->
-
-            <!--  Bottom part start  -->
-            <div class="flex flex-col gap-[12px]">
-                <div class="flex items-center mt-[20px] ml-[30px] justify-between">
-                    <h2 class="font-bold text-[22px]">Students List</h2>
-                    <div class="flex items-center gap-[30px]">
+            
+            <!-- Content -->
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-2xl font-bold">Students List</h2>
+                    <div class="flex items-center gap-4">
                         <svg width="14" height="22" viewBox="0 0 14 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <g clip-path="url(#clip0_21_315)">
                             <path d="M12.6 12.375H1.39998C0.157481 12.375 -0.472519 13.8574 0.411231 14.7211L6.01123 20.2211C6.55811 20.7582 7.44623 20.7582 7.99311 20.2211L13.5931 14.7211C14.4681 13.8574 13.8425 12.375 12.6 12.375ZM6.99998 19.25L1.39998 13.75H12.6L6.99998 19.25ZM1.39998 9.625H12.6C13.8425 9.625 14.4725 8.14257 13.5887 7.2789L7.98873 1.7789C7.44186 1.24179 6.55373 1.24179 6.00686 1.7789L0.406856 7.2789C-0.468144 8.14257 0.157481 9.625 1.39998 9.625ZM6.99998 2.74999L12.6 8.24999H1.39998L6.99998 2.74999Z" fill="#FEAF00"/>
-                            </g>
-                            <defs>
-                            <clipPath id="clip0_21_315">
-                            <rect width="14" height="22" fill="white"/>
-                            </clipPath>
-                        </defs>
-                    </svg>
-                    <button onclick="handleAddBtnClick()" class="font-medium text-[14px] w-[199px] h-[44px] bg-[#FEAF00] rounded-[4px] text-white duration-300 cursor-pointer">ADD NEW STUDENT</button>
+                        </svg>
+                        <button onclick="handleAddBtnClick()" class="bg-[#FEAF00] text-white px-6 py-2 rounded hover:bg-[#e09d00] transition">
+                            ADD NEW STUDENT
+                        </button>
                     </div>
                 </div>
-                <span class="border-[1px] border-[#E5E5E5] w-[1200px]"></span>
+                
+                <div class="border-t border-gray-200 mb-4"></div>
+                
+                <!-- Students Table -->
+                <div class="overflow-x-auto">
+                    <table class="min-w-full">
+                        <thead>
+                            <tr class="text-left text-sm text-gray-500">
+                                <th class="pb-2">Name</th>
+                                <th class="pb-2 pl-12">Email</th>
+                                <th class="pb-2 pl-12">Phone</th>
+                                <th class="pb-2 pl-12">Enroll Number</th>
+                                <th class="pb-2 pl-12">Date of Admission</th>
+                                <th class="pb-2 pl-12">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody class="students-list">
+                            <!-- Students will be inserted here by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
             </div>
-
-            <table class="ml-[139px] mt-[22px]">
-                <thead>
-                    <tr>
-                        <th class="font-semibold text-center text-[#ACACAC]  text-[12px] hover:text-[#FEAF00] duration-300 cursor-pointer">
-                            Name
-                        </th>
-                        <th class="font-semibold text-[#ACACAC] pl-[101px] text-start text-[12px] hover:text-[#FEAF00] duration-300 cursor-pointer">
-                            Email
-                        </th>
-                        <th class="font-semibold text-[#ACACAC] pl-[100px] text-start text-[12px] hover:text-[#FEAF00] duration-300 cursor-pointer">
-                            Phone
-                        </th>
-                        <th class="font-semibold text-[#ACACAC] pl-[70px] text-start  text-[12px] hover:text-[#FEAF00] duration-300 cursor-pointer">
-                            Enroll Number
-                        </th>
-                        <th class="font-semibold text-[#ACACAC] pl-[80px] text-start  text-[12px] hover:text-[#FEAF00] duration-300 cursor-pointer">
-                            Date admission
-                        </th>    
-                    </tr>
-                </thead>
-            </table>
-            <!--  Bottom part end  -->
         </div>
-    <!--  Students right page end  -->
-   </div>
-
-<input type="text" placeholder="">
-    <div id="wrapper" class="modal-wrapper scale-0 duration-300 flex items-center justify-center fixed top-0 bottom-0 left-0 right-0 bg-[#00000097] backdrop-blur-[5px]">
-        <div class="modal-inner p-[20px] bg-white rounded-md"> </div>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    
+    <!-- Modal -->
+    <div class="modal-wrapper fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center scale-0">
+        <div class="modal-inner bg-white rounded-lg p-6 w-full max-w-4xl">
+            <!-- Modal content will be inserted here by JavaScript -->
+        </div>
+    </div>
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="./js/students.js"></script>
 </body>
 </html>
